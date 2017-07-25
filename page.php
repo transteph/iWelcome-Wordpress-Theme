@@ -14,9 +14,7 @@
 get_header(); ?>
 
 	<div class="site-wrapper">
-			<main id="main" class="site-main" role="main">
-<div class="post" id="post-<?php the_ID(); ?>">
-	
+			<main id="main"  class="front-page" role="main">
 		<?php
              $args = array( 'category__in' => 2, 3  );
               $query = new WP_Query( $args ); 
@@ -47,7 +45,6 @@ get_header(); ?>
 					</div><!-- .grid-outer -->
 	<?php wp_reset_postdata(); ?>
 	<?php endif; ?>
-				</div>
 </main><!-- #main -->
 </div>	<!-- #primary -->
 </div><!-- .wrap -->

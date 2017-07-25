@@ -722,7 +722,20 @@ html[lang="th"] * {
 
 
 /* Custom CSS */
-
+.site-wrapper{
+    background-image: url('');
+    background-position:bottom right;
+    box-shadow: none;
+}
+.post{
+    text-shadow: none;
+    color: black;
+    text-align: left;
+}
+.post-text{
+    max-width:90%;
+    margin: 0 auto;
+}
 .col-md-12 {
     padding-top: 50px;
     margin-bottom: 200px;
@@ -752,37 +765,23 @@ html[lang="th"] * {
 }
 .img-container{
     overflow:hidden;
-        transition: 0.2s all ease-in;
--webkit-transition: 0.2s all ease-in;
--moz-transition: 0.2s all ease-in;
--ms-transition: 0.2s all ease-in;
--o-transition: 0.2s all ease-in;
 }
 .img-container:hover{
     overflow:hidden;
-    transform: scale(1.2);
-    display: block;
-    position: relative;
-    z-index:200;
 }
 
 .post-title-link img {
-    margin: -5px -10px -10px -5px;
-    transition: 0.2s all ease-in;
--webkit-transition: 0.2s all ease-in;
--moz-transition: 0.2s all ease-in;
--ms-transition: 0.2s all ease-in;
--o-transition: 0.2s all ease-in;
-    filter: blur(10px) grayscale(1);
+   transition: filter .5s ease-in-out;
+  -webkit-filter: grayscale(100%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+  filter: grayscale(100%); /* FF 35+ */
     width: 100%;
 }
 .post-title-link img:hover{
--webkit-filter: grayscale(0%);
-   -moz-filter: grayscale(0%);
-   filter: grayscale(0%);
+webkit-filter: grayscale(0%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+  filter: grayscale(0%); /* FF 35+ */
   
 }
-.post-title {
+.front-page .post-title {
     display: none;
 }
 
@@ -819,7 +818,7 @@ html[lang="th"] * {
 html,
 body {
     height: 100%;
-    background-color: #333;
+    background-color:white;
 }
 
 body {
@@ -840,8 +839,31 @@ a:hover {
     padding-left: 20px;
 }
 
+/* Social Media */
+.menu-social-container{
+    display: block;
+    position: fixed;
+    left:1px;
+    bottom:20px;
+}
+.icon{
+    width:30px;
+    height:75px;
+    fill:white;
+}
+.social-links-menu li{
+    
+}
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
+.masthead,
+.mastfoot{
+    background-color: white;
+}
+.masthead a,
+.mastfoot a{
+    color:black;
+}
 
 .site-wrapper {
     display: table;
@@ -849,8 +871,6 @@ a:hover {
     height: 100%;
     /* For at least Firefox */
     min-height: 100%;
-    -webkit-box-shadow: inset 0 0 100px rgba(0, 0, 0, .5);
-    box-shadow: inset 0 0 100px rgba(0, 0, 0, .5);
 }
 
 .site-wrapper-inner {
