@@ -39,9 +39,11 @@ get_header(); ?>
 											</a>
 										</div>
 										<?php else :?>
-											<a class="post-title-link" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
-												<?php the_title(); ?>
-										</a>
+											<div class="post-no-img">
+												<a class="post-title-link" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
+													<?php the_title(); ?>
+												</a>
+										</div>
 									<?php endif; ?>
 									</div>	
 					
@@ -51,7 +53,7 @@ get_header(); ?>
 	<?php wp_reset_postdata(); ?>
 	<?php endif; ?>
 </main><!-- #main -->
-</div>	<!-- #primary -->
+</div>	<!-- .site-wrapper -->
 </div><!-- .wrap -->
 
 	<?php get_footer();
