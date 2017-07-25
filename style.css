@@ -806,7 +806,10 @@ body {
     font-kerning: normal;
     line-height: 1.1;
 }
-
+.site-content{
+    width:100%;
+    overflow:hidden;
+}
 .first-box {
     display: table;
     height: 400px;
