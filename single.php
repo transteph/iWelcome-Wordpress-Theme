@@ -21,14 +21,14 @@ get_header(); ?>
 				<?php the_content(); ?>
 
 			</div>
-			
+			<div class="center">
 			<?php edit_post_link('Edit this entry','','.'); ?>
-
+			</div>
 
 		<?php
 				the_post_navigation( array(
-					'prev_text' => '<span class="screen-reader-text">' . __( 'Previous Post' ) . '</span><span aria-hidden="true" class="nav-subtitle fa fa-arrow-circle-o-left"></span>%title</span>',
-					'next_text' => '<span class="screen-reader-text">' . __( 'Next Post' ) . '</span><span aria-hidden="true" class="nav-subtitle"></span> <span class="nav-title">%title<span class="nav-title-icon-wrapper fa  fa-arrow-circle-o-right"></span></span>',
+					'prev_text' => '<span class="screen-reader-text">' . __( 'Previous Post' ) . '</span><span aria-hidden="true" class="nav-subtitle fa fa-arrow-circle-o-left"></span>   %title</span>',
+					'next_text' => '<span class="screen-reader-text">' . __( 'Next Post' ) . '</span><span aria-hidden="true" class="nav-subtitle"></span> <span class="nav-title">%title   <span class="nav-title-icon-wrapper fa  fa-arrow-circle-o-right"></span></span>',
 				) );
 
 			endwhile; // End of the loop.

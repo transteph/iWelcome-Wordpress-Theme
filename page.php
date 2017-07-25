@@ -22,7 +22,12 @@ get_header(); ?>
 
 	<?php if ( $query->have_posts() ) : ?>
 					<div class="grid-outer">
-						
+						<div class="img-container first-box">
+							<div class="float-left"><h2 class="intro-head">Canadian Refugee Champions</h2> </div>
+							<div class="float-right"><i class="icon-amnesty-house"></i>	</div>
+							
+							 
+						</div>
 						<?php while ( $query->have_posts() ) : $query->the_post(); ?>
 								<div class="overlay">
 									<!--  Image -->  

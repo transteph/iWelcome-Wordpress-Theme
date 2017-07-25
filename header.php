@@ -45,18 +45,9 @@
 	<body <?php body_class(); ?>>
 		<div id="page" class="site">
 		
-			<header class="masthead clearfix" role="banner">
-				<?php if ( has_nav_menu( 'top' ) ) : ?>
-				<div class="navigation-top">
-					<div class="wrap">
-						<?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
-					</div>
-					<!-- .wrap -->
-				</div>
-				<!-- .navigation-top -->
-				<?php endif; ?>
-
-			</header>
+		<header class="masthead clearfix" role="banner">
+				<h1><a href="http://aito.ca/iwelcome/"><i class="icon-amnesty-house"></i><span>iWelcome Refugees</span>  </a></h1>
+		</header>
 
 				<div class="site-content-contain">
 					<div id="content" class="site-content">

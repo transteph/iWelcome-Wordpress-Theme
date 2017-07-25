@@ -218,7 +218,12 @@ input[type="checkbox"] {
 	-webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
 	transform: rotate(180deg);
 }
-
+.nav-previous{
+	float:left;
+}
+.nav-next{
+	float:right;
+}
 /* Widgets */
 
 .widget ul {
