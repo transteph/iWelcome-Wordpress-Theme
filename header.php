@@ -26,23 +26,20 @@
 		<meta property="og:title" content="iWelcome Refugees" />
 		<meta property="og:description" content="iWelcome Refugees - an Amnesty International campaign welcoming refugee and migrants."
 		/>
-		<meta property="og:image" content="http://aito.ca/reelawareness/wp-content/uploads/aito-reel-awareness-film-festival-banner.png"
+		<meta property="og:image" content="http://aito.ca/iwelcome/wp-content/uploads/2017/07/screenshot-1.png"
 		/>
 		<!-- sharing thumbnail image -->
 		<link rel="image_src" href="http://aito.ca/iwelcome/wp-content/uploads/2017/07/screenshot-1.png">
 		<link rel="shortcut icon" type="image/x-icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
-		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
-	
 		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 		<link rel="profile" href="http://gmpg.org/xfn/11">
 
 		<?php wp_head(); ?>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-	
 	</head>
 
-	<body <?php body_class(); ?>>
+		<body <?php body_class(); ?>>
 		<div id="page" class="site">
 		
 		<header class="masthead clearfix" role="banner">

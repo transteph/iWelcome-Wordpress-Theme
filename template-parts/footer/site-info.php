@@ -13,4 +13,3 @@
 							<?php echo date("Y");?> Amnesty International Toronto Organization
 				</a>
 			</p>
-</div>	<!-- .site-info -->

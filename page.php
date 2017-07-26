@@ -29,19 +29,21 @@ get_header(); ?>
 							 
 						</div>
 						<?php while ( $query->have_posts() ) : $query->the_post(); ?>
-								<div class="overlay">
+								<div class="grid-cell-container">
 									<!--  Image -->  
 									<?php if ( has_post_thumbnail()) : ?>
 										<div class="img-container">
 											<a class="post-title-link" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
 												<img class="blur" src="<?php the_post_thumbnail_url(); ?>"/>
-													<span class="post-title">  <?php the_title(); ?></span>
+													<div class="grid-title">  <?php the_title(); ?></div>
 											</a>
 										</div>
 										<?php else :?>
 											<div class="post-no-img">
 												<a class="post-title-link" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
+													<div class="grid-title">
 													<?php the_title(); ?>
+													</div>
 												</a>
 										</div>
 									<?php endif; ?>

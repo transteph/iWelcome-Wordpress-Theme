@@ -9,7 +9,6 @@
  */
 
 ?>
-
 		</div><!-- #content -->
 <footer class="mastfoot">
 		<div class="inner">
@@ -35,8 +34,6 @@
 			</div><!-- .inner -->
 		</footer><!-- .mastfoot -->
 	</div><!-- .site-content-contain -->
-</div><!-- #page -->
 <?php wp_footer(); ?>
-
 </body>
 </html>
