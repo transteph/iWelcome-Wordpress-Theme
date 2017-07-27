@@ -65,6 +65,7 @@ ul,li{
     height: 100%;
     /* For at least Firefox */
     min-height: 100%;
+    table-layout:fixed;
 }
 .site-wrapper-inner {
     display: table-cell;
