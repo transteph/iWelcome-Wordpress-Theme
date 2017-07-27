@@ -22,7 +22,7 @@ get_header(); ?>
                     <div class="grid-outer">
                         <div class="img-container first-box">
                             <div class="float-left">
-                                <h2 class="intro-head">Refugee Champions</h2> </div>
+                                <h2>Refugee Champions</h2> </div>
                             <div class="float-right"><i class="icon-house-icon"></i></div>
                         </div>
                         <?php while ( $query->have_posts() ) : $query->the_post(); ?>
@@ -52,6 +52,17 @@ get_header(); ?>
                     <!-- .grid-outer -->
                     <?php wp_reset_postdata(); ?>
                         <?php endif; ?>
+            <!-- 2nd part of page -->
+            <div class="section-2">
+            </div>
+            
+             <!-- 3rd part of page -->
+            <div class="section-3">
+            
+            
+            
+            
+            </div>
         </main>
         <!-- #main -->
     </div>

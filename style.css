@@ -47,7 +47,7 @@ ul,li{
 }
 .masthead h1 {
     color: black;
-    font-size: 300%;
+    font-size: 200%;
     text-shadow: none;
     float: left;
     padding-left: 20px;
@@ -78,9 +78,6 @@ ul,li{
 .inner {
     padding: 30px;
 }
-main{
-    padding-bottom:50px;
-}
 /* Social Nav */
 
 .menu-social-container {
@@ -101,23 +98,24 @@ main{
         Frontpage
 --------------------------------------------------------------*/
 .float-left {
-    display: table-cell;
     vertical-align: bottom;
-    text-align: left;
+    float:left;
     width: 50%;
 }
+.float-left h2{
+    font-size:150%;
+}
 .float-right {
-    display: table-cell;
-    text-align: right;
     vertical-align: bottom;
-    width: 30%;
-    font-size:450%;
+    font-size:250%;
+}
+.float-right i{
+    position: absolute;
+    right: 0;
+    bottom: -17px;
 }
 .center{
     text-align:center;
-}
-.intro-head {
-    font-size: 170%;
 }
 .page .mastfoot {
 	background-color:grey;
@@ -133,8 +131,7 @@ main{
     line-height: 1;
 }
 .first-box {
-    display: table;
-    height: 400px;
+    padding-top: 100px;
     background-color: yellow;
     color: black;
     font-size: 200%;
@@ -193,6 +190,8 @@ main{
     /* Firefox */
     column-count: 3;
     column-gap: 0px;
+    background-color: rgb(255, 0, 0, 0);
+    opacity: 1;
 }
 .grid-outer li {
     width: 100%;
@@ -229,7 +228,20 @@ main{
         column-count: 1;
     }
 }
-
+/*---   Section 2, Homepage ---*/
+.section-2{
+    height:580px;
+    background:url('http://aito.ca/iwelcome/wp-content/uploads/2017/07/iwelcomeamnesty2.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*---   Section 3, Homepage ---*/
+.section-3{
+    height:800px;
+    background-color:red;
+}
 /*--------------------------------------------------------------
         Story Posts
 --------------------------------------------------------------*/
@@ -274,8 +286,11 @@ main{
     .nav-links .fa{
         font-size:300%;
     }
-    .nav-previous,.nav-next{
+    .nav-previous{
         padding-left:10px;
+    }
+    .nav-next{
+        padding-right:10px;
     }
     /* Mobile Social Nav */
     .menu-social-container {
