@@ -6,112 +6,45 @@ Description:
 Version: 1.0
 */
 
-/* svg font */
-
-@font-face {
-    font-family: 'fontello';
-    src: url('assets/font/fontello.eot?10256582');
-    src: url('assets/font/fontello.eot?10256582#iefix') format('embedded-opentype'), url('assets/font/fontello.woff2?10256582') format('woff2'), url('assets/font/fontello.woff?10256582') format('woff'), url('assets/font/fontello.ttf?10256582') format('truetype'), url('assets/font/fontello.svg?10256582#fontello') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-[class^="icon-"]:before,
-[class*=" icon-"]:before {
-    font-family: "fontello";
-    font-style: normal;
-    font-weight: normal;
-    speak: none;
-    display: inline-block;
-    text-decoration: inherit;
-    width: 1em;
-    margin-right: .2em;
-    text-align: center;
-    /* opacity: .8; */
-    /* For safety - reset parent styles, that can break glyph codes*/
-    font-variant: normal;
-    text-transform: none;
-    /* fix buttons height, for twitter bootstrap */
-    line-height: 1em;
-    /* Animation center compensation - margins should be symmetric */
-    /* remove if not needed */
-    margin-left: .2em;
-    /* you can be more comfortable with increased icons size */
-    /* font-size: 120%; */
-    /* Font smoothing. That was taken from TWBS */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    /* Uncomment for 3D effect */
-    /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
-}
-
-.icon-amnesty-house:before {
-    content: '\e800';
-}
-
-.icon-amnesty-house {
-    fill: yellow;
-    font-size: 300%;
-}
-
-ul,li{
-	list-style: none;
-}
-/* 		Custom CSS 		*/
-
+/*--------------------------------------------------------------
+        Globals
+--------------------------------------------------------------*/
+html,
 body {
-    font-family: TradeGothicLT-BoldCondTwenty, HelveticaNeue-CondensedBold, "Franklin Gothic Medium", sans-serif;
-    -webkit-font-feature-settings: 'kern';
-    font-feature-settings: 'kern';
-    -webkit-font-kerning: normal;
-    font-kerning: normal;
-    line-height: 1.1;
+    height: 100%;
+    background-color: white;
 }
-.site-content{
-    width:100%;
-    overflow:hidden;
+body {
+    font-family: "Roboto",sans-serif;
+    font-size: 20px;
+    line-height: 1.4;
 }
-.first-box {
-    display: table;
-    height: 400px;
-    background-color: yellow;
-    color: black;
-    font-size: 200%;
+a {
+    color: #000000;
 }
-
-.float-left {
-    display: table-cell;
-    vertical-align: bottom;
-    text-align: left;
-    width: 50%;
+a:hover {
+    text-decoration: none;
 }
-
-.float-right {
-    display: table-cell;
-    width: 30%;
+h1,h2,h3,h4,h5,h6{
+    font-family: "TradeGothicW01-BoldCn20_675334",sans-serif;
+    line-height: 1;
 }
-.center{
-    text-align:center;
+h1{
+    font-size:200%;
 }
-.nav-previous{
-    padding-left:20px;
-	float:left;
+h2{
+    font-size:170%;
 }
-.nav-next{
-    float:right;
-    padding-right:20px;
+h3{
+    font-size:150%;
 }
-.intro-head {
-    font-size: 220%;
+ul,li{
+    list-style:none;
 }
-
 .masthead {
-    display: block;
     width: 100%;
     background-color: white;
-    height: 150px;
 }
-
 .masthead h1 {
     color: black;
     font-size: 300%;
@@ -119,160 +52,40 @@ body {
     float: left;
     padding-left: 20px;
 }
-
-.site-wrapper {
-    background-image: url('');
-    background-position: bottom right;
-    box-shadow: none;
+.site-content{
+    width:100%;
+    overflow:hidden;
 }
-
-.post {
-    text-shadow: none;
-    color: black;
-    text-align: left;
-}
-
-.post-text {
-    max-width: 90%;
-    margin: 0 auto;
-    font-size:20px;
-}
-
-.col-md-12 {
-    padding-top: 50px;
-    margin-bottom: 200px;
-}
-
-.grid-outer {
-    -webkit-column-count: 3;
-    /* Chrome, Safari, Opera */
-    -moz-column-count: 3;
-    /* Firefox */
-    column-count: 3;
-    column-gap: 0px;
-}
-
-.grid-outer li {
-    width: 100%;
-    padding: 0px;
-}
-
-.grid-outer li:last-child {
-    background-color: yellow;
-    padding: 20px;
-}
-.grid-cell-container{
-	position: relative;
-	clear: both;
-	margin: 0 auto;
-}
-.img-container {
-    overflow: hidden;
-	position: relative;
-	float: left;
-	overflow: hidden;
-}
-
-.img-container:hover {
-    overflow: hidden;
-}
-
-.post-title-link img {
-    transition: filter .5s ease-in-out;
-    -webkit-filter: grayscale(100%);
-    /* Ch 23+, Saf 6.0+, BB 10.0+ */
-    filter: grayscale(100%);
-    /* FF 35+ */
-    width: 100%;
-}
-
-.post-title-link:hover img {
-    webkit-filter: grayscale(0%);
-    /* Ch 23+, Saf 6.0+, BB 10.0+ */
-    filter: grayscale(0%);
-    /* FF 35+ */
-}
-
-.post-title-link:hover .grid-title{
-	opacity:1;
-	left:0px;
-}
-.post-title-link .grid-title {
-    opacity:0;
-	display: block;
-	background-color: rgba(0, 0, 0, 0.6);
-	text-shadow: 0 0 2px black;
-	color: white;
-	padding: 20px 5px;
-	font-size: 150%;
-	width: 70%;
-    position: absolute;
-    bottom: 20%;
-	left:-100px;
-	transition: all .2s ease-in;
-}
-
-@media (max-width: 950px) {
-    .grid-outer {
-        -webkit-column-count: 2;
-        /* Chrome, Safari, Opera */
-        -moz-column-count: 2;
-        /* Firefox */
-        column-count: 2;
-    }
-}
-
-@media (max-width: 700px) {
-    .grid-outer {
-        -webkit-column-count: 2;
-        /* Chrome, Safari, Opera */
-        -moz-column-count: 2;
-        /* Firefox */
-        column-count: 2;
-    }
-}
-
-@media (max-width: 500px) {
-    .grid-outer {
-        -webkit-column-count: 1;
-        /* Chrome, Safari, Opera */
-        -moz-column-count: 1;
-        /* Firefox */
-        column-count: 1;
-    }
-}
-
-html,
-body {
-    height: 100%;
-    background-color: white;
-    text-shadow: none!important;
-}
-
-body {
-    color: #fff;
-    text-align: center;
-}
-
-a {
-    color: #000000;
-}
-
-a:hover {
-    text-decoration: none;
-}
-
 .site-title {
     padding-left: 20px;
 }
-
-
-/* Social Media */
+.site-wrapper {
+    display: table;
+    width: 100%;
+    height: 100%;
+    /* For at least Firefox */
+    min-height: 100%;
+}
+.site-wrapper-inner {
+    display: table-cell;
+    vertical-align: top;
+}
+.cover-container {
+    margin-right: auto;
+    margin-left: auto;
+}
+.inner {
+    padding: 30px;
+}
+main{
+    padding-bottom:50px;
+}
+/* Social Nav */
 
 .menu-social-container {
     display: block;
     position: fixed;
-    left: 1px;
+    left: -20px;
     bottom: 20px;
 }
 
@@ -283,117 +96,235 @@ a:hover {
     -webkit-filter: drop-shadow( 1px -2px 5px #000);
     filter: drop-shadow( 1px -2px 5px #000);
 }
-
-
-/* Extra markup and styles for table-esque vertical and horizontal centering */
-
-.masthead {
-    background-color: white;
+/*--------------------------------------------------------------
+        Frontpage
+--------------------------------------------------------------*/
+.float-left {
+    display: table-cell;
+    vertical-align: bottom;
+    text-align: left;
+    width: 50%;
 }
-.mastfoot {
+.float-right {
+    display: table-cell;
+    text-align: right;
+    vertical-align: bottom;
+    width: 30%;
+    font-size:450%;
+}
+.center{
+    text-align:center;
+}
+.intro-head {
+    font-size: 170%;
+}
+.page .mastfoot {
 	background-color:grey;
 	color:white;
-	font-size:150%;
+	font-size:80%;
 	width:100%;
 	box-shadow:2px 2px 5px #000;
+    text-align:center;
 }
-
-.masthead a,
-.mastfoot a {
-    color: black;
+/* Grid */
+.grid-cell-container a{
+    font-family: "TradeGothicW01-BoldCn20_675334",sans-serif;
+    line-height: 1;
 }
-
-.site-wrapper {
+.first-box {
     display: table;
+    height: 400px;
+    background-color: yellow;
+    color: black;
+    font-size: 200%;
+}
+.grid-cell-container{
+	position: relative;
+	clear: both;
+	margin: 0 auto;
+}
+.img-container {
+    overflow: hidden;
+	position: relative;
+	overflow: hidden;
+}
+
+.img-container:hover {
+    overflow: hidden;
+}
+.post-title-link img {
+    transition: filter .5s ease-in-out;
+    -webkit-filter: grayscale(100%);
+    /* Ch 23+, Saf 6.0+, BB 10.0+ */
+    filter: grayscale(100%);
+    /* FF 35+ */
     width: 100%;
-    height: 100%;
-    /* For at least Firefox */
-    min-height: 100%;
+}
+.post-title-link:hover img {
+    webkit-filter: grayscale(0%);
+    /* Ch 23+, Saf 6.0+, BB 10.0+ */
+    filter: grayscale(0%);
+    /* FF 35+ */
+}
+.post-title-link:hover .grid-title{
+	opacity:1;
+	left:0px;
+}
+.post-title-link .grid-title {
+    opacity:0;
+	display: block;
+	background-color: rgba(0, 0, 0, 0.6);
+	text-shadow: 0 0 2px black;
+	color: white;
+	padding: 10px 10px 10px 30px;
+	font-size: 150%;
+    text-align: right;
+	width: 70%;
+    position: absolute;
+    bottom: 20%;
+	left:-100px;
+	transition: all .2s ease-in;
+}
+.grid-outer {
+    -webkit-column-count: 3;
+    /* Chrome, Safari, Opera */
+    -moz-column-count: 3;
+    /* Firefox */
+    column-count: 3;
+    column-gap: 0px;
+}
+.grid-outer li {
+    width: 100%;
+    padding: 0px;
+}
+.grid-outer li:last-child {
+    background-color: yellow;
+    padding: 20px;
+}
+@media (max-width: 950px) {
+    .grid-outer {
+        -webkit-column-count: 2;
+        /* Chrome, Safari, Opera */
+        -moz-column-count: 2;
+        /* Firefox */
+        column-count: 2;
+    }
+}
+@media (max-width: 700px) {
+    .grid-outer {
+        -webkit-column-count: 2;
+        /* Chrome, Safari, Opera */
+        -moz-column-count: 2;
+        /* Firefox */
+        column-count: 2;
+    }
+}
+@media (max-width: 500px) {
+    .grid-outer {
+        -webkit-column-count: 1;
+        /* Chrome, Safari, Opera */
+        -moz-column-count: 1;
+        /* Firefox */
+        column-count: 1;
+    }
 }
 
-.site-wrapper-inner {
-    display: table-cell;
-    vertical-align: top;
+/*--------------------------------------------------------------
+        Story Posts
+--------------------------------------------------------------*/
+.nav-previous{
+    padding-left:100px;
+	float:left;
+}
+.nav-next{
+    float:right;
+    padding-right:100px;
+}
+.single .mastfoot{
+    background-color: yellow;
+    color:black;
+    font-size:80%;
+    font-family: "TradeGothicW01-BoldCn20_675334",sans-serif;
+    text-align:center;
+}
+.post {
+    text-shadow: none;
+    color: black;
+    text-align: left;
 }
 
-.cover-container {
-    margin-right: auto;
-    margin-left: auto;
+.post-text {
+    max-width: 70%;
+    margin: 0 auto;
 }
-
-.inner {
-    padding: 30px;
+.post-text p{
+    margin: 20px 0;
 }
-
-.masthead-nav>li {
-    display: inline-block;
-}
-
-.masthead-nav>li+li {
-    margin-left: 20px;
-}
-
-.masthead-nav>li>a {
-    padding-right: 0;
-    padding-left: 0;
-    font-size: 16px;
+.post a{
     font-weight: bold;
-    color: #fff;
-    /* IE8 proofing */
-    color: rgba(255, 255, 255, .75);
-    border-bottom: 2px solid transparent;
 }
-
-.masthead-nav>li>a:hover,
-.masthead-nav>li>a:focus {
-    background-color: transparent;
-    border-bottom-color: #a9a9a9;
-    border-bottom-color: rgba(255, 255, 255, .25);
-}
-
-.masthead-nav>.active>a,
-.masthead-nav>.active>a:hover,
-.masthead-nav>.active>a:focus {
-    color: #fff;
-    border-bottom-color: #fff;
-}
-
-@media (min-width: 768px) {
-    .masthead-brand {
-        float: left;
+/*--------------------------------------------------------------
+   Smaller Screen Media Query
+--------------------------------------------------------------*/
+@media (max-width: 800px) {
+    .nav-title{
+        display:none;
     }
-    .masthead-nav {
-        float: right;
+    .nav-links .fa{
+        font-size:300%;
+    }
+    .nav-previous,.nav-next{
+        padding-left:10px;
+    }
+    /* Mobile Social Nav */
+    .menu-social-container {
+        display: none;
     }
 }
 
+/*--------------------------------------------------------------
+   Icons
+--------------------------------------------------------------*/
+@charset "UTF-8";
 
-/*
- * Footer
- */
+@font-face {
+  font-family: "iwelcome";
+  src:url("assets/font/iwelcome.eot");
+  src:url("assets/font/iwelcome.eot?#iefix") format("embedded-opentype"),
+    url("assets/font/iwelcome.woff") format("woff"),
+    url("assets/font/iwelcome.ttf") format("truetype"),
+    url("assets/font/iwelcome.svg#iwelcome") format("svg");
+  font-weight: normal;
+  font-style: normal;
 
-.mastfoot {
-    color: #999;
-    /* IE8 proofing */
-    color: rgba(255, 255, 255, .5);
 }
 
-
-/*
- * Affix and center
- */
-
-@media (min-width: 768px) {
-    /* Start the vertical centering */
-    .site-wrapper-inner {
-        vertical-align: middle;
-    }
-    /* Handle the widths */
-    .masthead,
-    .mastfoot,
-    .cover-container {
-        width: 100%;
-        /* Must be percentage or pixels for horizontal alignment */
-    }
+[data-icon]:before {
+  font-family: "iwelcome" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "iwelcome" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-house-icon:before {
+  content: "\61";
+}

@@ -12,23 +12,20 @@
  */
 
 get_header(); ?>
-
-	<div class="site-wrapper">
-			<main id="main"  class="front-page" role="main">
-		<?php
+    <div class="site-wrapper">
+        <main id="main" class="front-page" role="main">
+            <?php
              $args = array( 'category__in' => 2, 3  );
               $query = new WP_Query( $args ); 
 ?>
-
-	<?php if ( $query->have_posts() ) : ?>
-					<div class="grid-outer">
-						<div class="img-container first-box">
-							<div class="float-left"><h2 class="intro-head">Canadian Refugee Champions</h2> </div>
-							<div class="float-right"><i class="icon-amnesty-house"></i>	</div>
-							
-							 
-						</div>
-						<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+                <?php if ( $query->have_posts() ) : ?>
+                    <div class="grid-outer">
+                        <div class="img-container first-box">
+                            <div class="float-left">
+                                <h2 class="intro-head">Refugee Champions</h2> </div>
+                            <div class="float-right"><i class="icon-house-icon"></i></div>
+                        </div>
+                        <?php while ( $query->have_posts() ) : $query->the_post(); ?>
 								<div class="grid-cell-container">
 									<!--  Image -->  
 									<?php if ( has_post_thumbnail()) : ?>
@@ -48,14 +45,17 @@ get_header(); ?>
 										</div>
 									<?php endif; ?>
 									</div>	
-					
-
-						<?php endwhile; ?><!-- end of the loop -->
-					</div><!-- .grid-outer -->
-	<?php wp_reset_postdata(); ?>
-	<?php endif; ?>
-</main><!-- #main -->
-</div>	<!-- .site-wrapper -->
-</div><!-- .wrap -->
-
-	<?php get_footer();
+                        
+                            <?php endwhile; ?>
+                                <!-- end of the loop -->
+                    </div>
+                    <!-- .grid-outer -->
+                    <?php wp_reset_postdata(); ?>
+                        <?php endif; ?>
+        </main>
+        <!-- #main -->
+    </div>
+    <!-- .site-wrapper -->
+    </div>
+    <!-- .wrap -->
+    <?php get_footer();

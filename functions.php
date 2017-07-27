@@ -404,7 +404,6 @@ function iwelcome_scripts() {
 		
 	// Theme stylesheet.
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
-	wp_enqueue_style( 'fonts', get_template_directory_uri() . '/fonts.css',false,'1.1','all');
 	wp_enqueue_style( 'normalize', get_template_directory_uri() . '/normalize.css',false,'1.1','all');
 	// Load the dark colorscheme.
 	if ( 'dark' === get_theme_mod( 'colorscheme', 'light' ) || is_customize_preview() ) {
@@ -553,3 +552,15 @@ require get_parent_theme_file_path( '/inc/customizer.php' );
  * SVG icons functions and filters.
  */
 require get_parent_theme_file_path( '/inc/icon-functions.php' );
+
+/**
+ * adjusting meta boxes
+ */
+function remove_meta_boxes() {
+    remove_meta_box( 'tagsdiv-post_tag', 'post' );// remove the Tags box
+    remove_meta_box( 'commentsdiv', 'post' );// remove the Comments box
+    remove_meta_box( 'formatdiv', 'post' );// remove the Format box
+    remove_meta_box( 'postimagediv' , 'page' , 'normal' ); 
+    remove_meta_box( 'pageparentdiv' , 'page' , 'normal' ); 
+}
+add_action( 'admin_menu', 'remove_meta_boxes' );
