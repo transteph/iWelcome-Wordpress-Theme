@@ -15,12 +15,27 @@ get_header(); ?>
 			<?php
 			/* Start the Loop */ while ( have_posts() ) : the_post(); ?>
 
-			<!--  title and post -->
-			<div class="post-text">
-				<h2 class="post-title"><?php the_title(); ?></h2>
-				<?php the_content(); ?>
-
+			<!--  title -->
+			<div class="post-title-div">
+				<h2 class="post-title-text"><?php the_title(); ?></h2>
 			</div>
+            
+            <!-- Header image div -->
+    <?php 
+        $image = get_field('main-photo');
+        if( !empty($image) ): ?>
+            <div class="huge-img" style="background-image: url('<?php echo $image['url']; ?>'); background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;"></div>
+     <?php endif; ?>   
+            
+            <!-- content body -->
+            <div class="content-body">
+                <?php the_content(); ?>
+            </div>
+            
+            
 			<div class="center">
 			<?php edit_post_link('Edit this entry','','.'); ?>
 			</div>

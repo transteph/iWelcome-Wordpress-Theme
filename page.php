@@ -13,7 +13,8 @@
 
 get_header(); ?>
     <div class="site-wrapper">
-        <main id="main" class="front-page" role="main">
+        <div id="loader"><img id="loader-img" src="http://aito.ca/iwelcome/wp-content/uploads/2017/07/iwelcome-loader.gif" /></div>
+        <main id="front-page" class="front-page" role="main">
             <?php
              $args = array( 'category__in' => 2, 3  );
               $query = new WP_Query( $args ); 
@@ -22,7 +23,10 @@ get_header(); ?>
                     <div class="grid-outer">
                         <div class="img-container first-box">
                             <div class="float-left">
-                                <h2>Refugee Champions</h2> </div>
+                                <a href="#frontpage-content">
+                                <h2>Refugee Champions</h2> 
+                                </a>        
+                            </div>
                             <div class="float-right"><i class="icon-house-icon"></i></div>
                         </div>
                         <?php while ( $query->have_posts() ) : $query->the_post(); ?>
@@ -53,15 +57,21 @@ get_header(); ?>
                     <?php wp_reset_postdata(); ?>
                         <?php endif; ?>
             <!-- 2nd part of page -->
-            <div class="section-2">
+            <div class="section-2" >
+                     <!-- 3rd part of page -->
+                <div class="section-3" >
+                    <?php while ( have_posts() ) : the_post(); ?> 
+                            <div class="frontpage-content" id="frontpage-content">
+                                <?php the_content(); ?> 
+                            </div>
+                             <?php endwhile; ?>
+                </div>
             </div>
             
-             <!-- 3rd part of page -->
-            <div class="section-3">
             
-            
-            
-            
+              <!-- 4th part of page -->
+            <div class="section-4">
+                
             </div>
         </main>
         <!-- #main -->
@@ -69,4 +79,5 @@ get_header(); ?>
     <!-- .site-wrapper -->
     </div>
     <!-- .wrap -->
-    <?php get_footer();
+
+    <?php get_footer();?>

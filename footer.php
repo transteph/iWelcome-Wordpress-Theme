@@ -10,7 +10,7 @@
 
 ?>
 		</div><!-- #content -->
-<footer class="mastfoot">
+<footer class="mastfoot" id="mastfoot">
 		<div class="inner">
 				<?php
 				get_template_part( 'template-parts/footer/footer', 'widgets' );
@@ -34,6 +34,29 @@
 			</div><!-- .inner -->
 		</footer><!-- .mastfoot -->
 	</div><!-- .site-content-contain -->
+        <script>
+            jQuery(document).ready(function( $ ) {
+                  $('#loader').delay(1500).slideUp(1000);
+                    $('#front-page').delay(1500).fadeIn(2000);
+                    $('#mastfoot').delay(2000).fadeIn(2000);
+            // smooth nav scrolling
+                // only run this script if window size is wide
+
+				$('a[href*="#"]:not([href="#"])').click(function () {
+					if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+						var target = $(this.hash);
+						target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+						if (target.length) {
+							$('html, body').animate({
+								scrollTop: target.offset().top
+							}, 1000);
+							return false;
+						}
+					}
+				});
+              
+        });
+        </script>
 <?php wp_footer(); ?>
 </body>
 </html>

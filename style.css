@@ -9,6 +9,12 @@ Version: 1.0
 /*--------------------------------------------------------------
         Globals
 --------------------------------------------------------------*/
+#front-page {
+  display: none;
+}
+.mastfoot{
+    display:none;
+}
 html,
 body {
     height: 100%;
@@ -23,7 +29,8 @@ a {
     color: #000000;
 }
 a:hover {
-    text-decoration: none;
+    text-decoration: none!important;
+    color:black;
 }
 h1,h2,h3,h4,h5,h6{
     font-family: "TradeGothicW01-BoldCn20_675334",sans-serif;
@@ -37,6 +44,8 @@ h2{
 }
 h3{
     font-size:150%;
+    padding: 0px;
+    margin: 0px;
 }
 ul,li{
     list-style:none;
@@ -97,6 +106,12 @@ ul,li{
 /*--------------------------------------------------------------
         Frontpage
 --------------------------------------------------------------*/
+#loader{
+    text-align: center;
+margin: 0 auto;
+display: block;
+
+}
 .float-left {
     vertical-align: bottom;
     float:left;
@@ -132,7 +147,7 @@ ul,li{
 }
 .first-box {
     padding-top: 100px;
-    background-color: yellow;
+    background-color: yellow!important;
     color: black;
     font-size: 200%;
 }
@@ -145,43 +160,47 @@ ul,li{
     overflow: hidden;
 	position: relative;
 	overflow: hidden;
+    background-color:black;
+    transition: all .3s ease-in-out;
 }
 
 .img-container:hover {
     overflow: hidden;
 }
 .post-title-link img {
-    transition: filter .5s ease-in-out;
+    transition: all .3s ease-in-out;
     -webkit-filter: grayscale(100%);
     /* Ch 23+, Saf 6.0+, BB 10.0+ */
     filter: grayscale(100%);
     /* FF 35+ */
     width: 100%;
+    opacity:0.7;
 }
 .post-title-link:hover img {
     webkit-filter: grayscale(0%);
     /* Ch 23+, Saf 6.0+, BB 10.0+ */
     filter: grayscale(0%);
     /* FF 35+ */
-}
-.post-title-link:hover .grid-title{
-	opacity:1;
-	left:0px;
+    opacity:1;
 }
 .post-title-link .grid-title {
     opacity:0;
 	display: block;
-	background-color: rgba(0, 0, 0, 0.6);
-	text-shadow: 0 0 2px black;
+	text-shadow: 2px 2px 15px black;
 	color: white;
 	padding: 10px 10px 10px 30px;
 	font-size: 150%;
     text-align: right;
 	width: 70%;
     position: absolute;
-    bottom: 20%;
-	left:-100px;
+    bottom: 10px;
+	opacity:1;
+	right:0px;
 	transition: all .2s ease-in;
+}
+.post-title-link .grid-title::after{
+    font-family:"iwelcome";
+    content: " \61";
 }
 .grid-outer {
     -webkit-column-count: 3;
@@ -230,7 +249,8 @@ ul,li{
 }
 /*---   Section 2, Homepage ---*/
 .section-2{
-    height:580px;
+    height:1800px;
+    padding-top:500px;
     background:url('http://aito.ca/iwelcome/wp-content/uploads/2017/07/iwelcomeamnesty2.png');
     background-attachment: fixed;
     background-position: center;
@@ -239,9 +259,28 @@ ul,li{
 }
 /*---   Section 3, Homepage ---*/
 .section-3{
-    height:800px;
-    background-color:red;
+    background-color:rgba(0, 0, 0, 0.74);
+    color:white;
+    width:70%;
+    margin:0 auto;
 }
+.section-3 h3{
+    font-size:240%;
+}
+.section-3 p{
+    padding-top:10px;
+}
+.frontpage-content{
+    padding:50px 30px 30px 30px;
+    text-shadow: 2px 2px 10px black;
+}
+/*---   Section 4, Homepage ---*/
+.section-4{
+    background-color:yellow;
+    color:black;
+    height:200px;
+}
+
 /*--------------------------------------------------------------
         Story Posts
 --------------------------------------------------------------*/
@@ -260,14 +299,24 @@ ul,li{
     font-family: "TradeGothicW01-BoldCn20_675334",sans-serif;
     text-align:center;
 }
-.post {
-    text-shadow: none;
-    color: black;
-    text-align: left;
+.post-title-div{
+    padding-top:300px;
+    background-color:white;
+    padding-bottom:200px;
+}
+.post-title-text{
+    font-size: 200%;
+    max-width:70%;
+    display:block;
+    margin:0 auto;
 }
 
-.post-text {
+.huge-img{
+    height:500px;
+}
+.content-body {
     max-width: 70%;
+    padding-top:50px;
     margin: 0 auto;
 }
 .post-text p{
@@ -297,6 +346,11 @@ ul,li{
         display: none;
     }
 }
+/*--------------------------------------------------------------
+   Animations
+--------------------------------------------------------------*/
+
+
 
 /*--------------------------------------------------------------
    Icons

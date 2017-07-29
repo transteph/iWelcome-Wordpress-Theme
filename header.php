@@ -38,6 +38,7 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700" rel="stylesheet"><link type="text/css" rel="stylesheet" href="//fast.fonts.net/cssapi/b0e730e1-218c-4476-8d8b-be9d8367d52a.css"/>
 		<?php wp_head(); ?>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
 	</head>
 
 		<body <?php body_class(); ?>>
