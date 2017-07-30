@@ -36,9 +36,6 @@
 	</div><!-- .site-content-contain -->
         <script>
             jQuery(document).ready(function( $ ) {
-                  $('#loader').delay(1500).slideUp(1000);
-                    $('#front-page').delay(1500).fadeIn(2000);
-                    $('#mastfoot').delay(2000).fadeIn(2000);
             // smooth nav scrolling
                 // only run this script if window size is wide
 
@@ -54,9 +51,19 @@
 						}
 					}
 				});
-              
         });
         </script>
+        <?php if (is_page()): ?>
+            <!--home page custom JS-->
+            <script type="text/javascript">
+                 jQuery(document).ready(function( $ ) {
+                     $('#loader').delay(1500).slideUp(1000);
+                    $('#front-page').delay(1500).fadeIn(2000);
+                    $('#mastfoot').delay(2000).fadeIn(2000);
+                 });
+            </script>
+        <?php endif; ?>
+
 <?php wp_footer(); ?>
 </body>
 </html>

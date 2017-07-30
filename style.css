@@ -12,21 +12,34 @@ Version: 1.0
 #front-page {
   display: none;
 }
-.mastfoot{
+.page .mastfoot{
     display:none;
 }
+html{
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 html,
 body {
     height: 100%;
-    background-color: white;
 }
 body {
     font-family: "Roboto",sans-serif;
     font-size: 20px;
     line-height: 1.4;
 }
+#main{
+    max-width:100%;
+    overflow:hidden;
+}
 a {
     color: #000000;
+    text-decoration: none!important;
 }
 a:hover {
     text-decoration: none!important;
@@ -35,6 +48,7 @@ a:hover {
 h1,h2,h3,h4,h5,h6{
     font-family: "TradeGothicW01-BoldCn20_675334",sans-serif;
     line-height: 1;
+    font-weight: unset;
 }
 h1{
     font-size:200%;
@@ -85,7 +99,7 @@ ul,li{
     margin-left: auto;
 }
 .inner {
-    padding: 30px;
+    padding: 70px 50px 20px 50px;
 }
 /* Social Nav */
 
@@ -96,12 +110,17 @@ ul,li{
     bottom: 20px;
 }
 
-.icon {
+.page .icon {
     width: 30px;
     height: 75px;
     fill: white;
     -webkit-filter: drop-shadow( 1px -2px 5px #000);
     filter: drop-shadow( 1px -2px 5px #000);
+}
+.single .icon {
+    width: 30px;
+    height: 75px;
+    fill: black;
 }
 /*--------------------------------------------------------------
         Frontpage
@@ -118,7 +137,7 @@ display: block;
     width: 50%;
 }
 .float-left h2{
-    font-size:150%;
+    font-size:120%;
 }
 .float-right {
     vertical-align: bottom;
@@ -132,18 +151,28 @@ display: block;
 .center{
     text-align:center;
 }
-.page .mastfoot {
-	background-color:grey;
-	color:white;
+.mastfoot {
+     background: url(http://aito.ca/iwelcome/wp-content/uploads/2017/07/yellow-header-profiles2.png);
+	background-attachment: fixed;
+    background-size: auto;
+    background-position: bottom;
 	font-size:80%;
 	width:100%;
-	box-shadow:2px 2px 5px #000;
     text-align:center;
+}
+.mastfoot a{
+    color:white;
+    text-shadow:1px -2px 5px #000;
 }
 /* Grid */
 .grid-cell-container a{
     font-family: "TradeGothicW01-BoldCn20_675334",sans-serif;
     line-height: 1;
+    overflow: hidden;
+    width: 100%;
+display: block;
+
+
 }
 .first-box {
     padding-top: 100px;
@@ -151,17 +180,15 @@ display: block;
     color: black;
     font-size: 200%;
 }
-.grid-cell-container{
-	position: relative;
-	clear: both;
-	margin: 0 auto;
-}
 .img-container {
     overflow: hidden;
 	position: relative;
 	overflow: hidden;
     background-color:black;
     transition: all .3s ease-in-out;
+    padding: 0px;
+margin: 0px;
+
 }
 
 .img-container:hover {
@@ -284,6 +311,49 @@ display: block;
 /*--------------------------------------------------------------
         Story Posts
 --------------------------------------------------------------*/
+.masthead-single{
+    color:white;
+    background-color: yellow;
+    width:100%;
+    height:80px;
+    box-shadow: 0px 0px 3px black;
+    position: fixed;
+    z-index: 2000;
+}
+.masthead-single a{
+    width:100%;
+    height: 80px;
+}
+.masthead-single h1{
+    float:left;
+    padding-left:20px;
+    font-weight: unset;
+    text-transform: uppercase;
+    font-size:140%;
+    position: absolute;
+    top: 0px;
+
+}
+.masthead-single h1 i{
+    font-size:150%;
+}
+.masthead-single h1 a{
+    color:white;
+    text-shadow: 2px 2px 10px black;
+    font-weight: unset;
+}
+.masthead-single img{
+    height:60px;
+    width:auto;
+    padding:0px 50px;
+    position: absolute;
+    right: 0;
+    top: 10px;
+
+}
+.single .site-wrapper{
+    padding-top:100px;
+}
 .nav-previous{
     padding-left:100px;
 	float:left;
@@ -292,37 +362,128 @@ display: block;
     float:right;
     padding-right:100px;
 }
-.single .mastfoot{
-    background-color: yellow;
-    color:black;
-    font-size:80%;
-    font-family: "TradeGothicW01-BoldCn20_675334",sans-serif;
-    text-align:center;
+.before-content{
+    display:table;
+    width:100%;
+    min-height:70vim;
+    box-shadow: 0 0 10px black;
+    position:relative;
 }
-.post-title-div{
-    padding-top:300px;
-    background-color:white;
-    padding-bottom:200px;
-}
-.post-title-text{
-    font-size: 200%;
-    max-width:70%;
+#photo-contain{
+    width:50%;
+    float:left;
     display:block;
-    margin:0 auto;
+    position:relative;
 }
-
+.frame{
+ background-color:#ddc;
+  border:solid 5vmin #eee;
+  border-bottom-color:#fff;
+  border-left-color:#eee;
+  border-radius:2px;
+  border-right-color:#eee;
+  border-top-color:#ddd;
+  box-shadow:0 0 5px 0 rgba(0,0,0,.25) inset, 0 5px 10px 5px rgba(0,0,0,.25);
+  box-sizing:border-box;
+  display:inline-block;
+  margin: 50px;
+  padding:1vmin;
+  position:relative;
+  text-align:center;
+  &:before {
+    border-radius:2px;
+    bottom:-2vmin;
+    box-shadow:0 2px 5px 0 rgba(0,0,0,.25) inset;
+    content:"";
+    left:-2vmin;
+    position:absolute;
+    right:-2vmin;
+    top:-2vmin;
+  }
+  &:after {
+    border-radius:2px;
+    bottom:-2.5vmin;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.25);
+    content:"";
+    left:-2.5vmin;
+    position:absolute;
+    right:-2.5vmin;
+    top:-2.5vmin;
+  }
+}
+.frame img {
+  border:solid 2px;
+  border-bottom-color:#ffe;
+  border-left-color:#eed;
+  border-right-color:#eed;
+  border-top-color:#ccb;
+  max-height:100%;
+  max-width:100%;
+}
 .huge-img{
     height:500px;
 }
+#no-pic{
+    color:yellow;
+    font-size:200px;
+}
+#quote-box{
+    position:absolute;
+    right:5%;
+    width:45%;
+    bottom: 30%;
+}
+#quote-box blockquote{
+  padding: 45px 40px 0px 0px;
+  margin: 0px;
+  position: relative;
+  font-family: "TradeGothicW01-BoldCn20_675334",sans-serif;
+  font-size: 35px;
+  line-height: 1;
+  color: #4a4a4a;
+    float: right;
+}
+#quote-box blockquote:before {
+    content: "\201C"; 
+  font-family: Georgia, serif;
+  font-size: 280px;
+  font-weight: bold;
+  color: #c6c6c6;
+  float: left;
+    text-shadow: -5px 2px 0px yellow;
+    z-index: -1;
+   transform: translateX(-20px);
+    max-height: 0px;
+}
+#quote-box blockquote:after{
+    content: "";
+    content: "";
+}
+#quote-box blockquote p {
+  display: inline;
+}
+/*      Right side of post     */
+.post-title-text{
+    font-size:200%;
+}
 .content-body {
-    max-width: 70%;
-    padding-top:50px;
-    margin: 0 auto;
+    padding: 40px 30px;
+    width:80%;
+    margin:0 auto;
+}
+.content-body img{
+    width:100%!important;
+    height:auto;
+}
+#after-content{
+    clear:both;
+    width:100%;
+    padding-bottom:100px;
 }
 .post-text p{
     margin: 20px 0;
 }
-.post a{
+.content-body a{
     font-weight: bold;
 }
 /*--------------------------------------------------------------
@@ -344,6 +505,16 @@ display: block;
     /* Mobile Social Nav */
     .menu-social-container {
         display: none;
+    }
+    
+    /*   Single post mobile style   */
+    #photo-contain{
+        width:100%;
+    }
+    .content-body {
+    max-width: 100%;
+    padding:10px 10px;
+    clear:both;
     }
 }
 /*--------------------------------------------------------------

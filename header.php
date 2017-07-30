@@ -31,22 +31,14 @@
 		<!-- sharing thumbnail image -->
 		<link rel="image_src" href="http://aito.ca/iwelcome/wp-content/uploads/2017/07/screenshot-1.png">
 		<link rel="shortcut icon" type="image/x-icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
-		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
         
 		<link rel="profile" href="http://gmpg.org/xfn/11">
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700" rel="stylesheet"><link type="text/css" rel="stylesheet" href="//fast.fonts.net/cssapi/b0e730e1-218c-4476-8d8b-be9d8367d52a.css"/>
 		<?php wp_head(); ?>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 	</head>
 
 		<body <?php body_class(); ?>>
 		<div id="page" class="site">
 		
-		<header class="masthead clearfix" role="banner">
-				<h1><a href="http://aito.ca/iwelcome/"><span>iWelcome Refugees <span class="icon-house-icon"></span></span>  </a></h1>
-		</header>
-
-				<div class="site-content-contain">
-					<div id="content" class="site-content">

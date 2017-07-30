@@ -12,7 +12,13 @@
  */
 
 get_header(); ?>
-    <div class="site-wrapper">
+<header class="masthead clearfix" role="banner">
+				<h1><a href="http://aito.ca/iwelcome/"><span>iWelcome Refugees <span class="icon-house-icon"></span></span>  </a></h1>
+		</header>
+
+				<div class="site-content-contain">
+					<div id="content" class="site-content">
+    <div class="site-wrapper home">
         <div id="loader"><img id="loader-img" src="http://aito.ca/iwelcome/wp-content/uploads/2017/07/iwelcome-loader.gif" /></div>
         <main id="front-page" class="front-page" role="main">
             <?php
