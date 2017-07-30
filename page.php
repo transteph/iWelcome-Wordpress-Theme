@@ -77,7 +77,10 @@ get_header(); ?>
             
               <!-- 4th part of page -->
             <div class="section-4">
-                
+                <div id="section-container">
+                <?php echo get_field('bottom_section'); ?>
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-size="large" data-text="#iWelcome Refugees. Check out some of these refugee champions and learn how you can be one too." data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
             </div>
         </main>
         <!-- #main -->

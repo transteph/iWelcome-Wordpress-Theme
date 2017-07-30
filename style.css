@@ -135,6 +135,7 @@ display: block;
     vertical-align: bottom;
     float:left;
     width: 50%;
+    padding-left: 20px;
 }
 .float-left h2{
     font-size:120%;
@@ -146,7 +147,7 @@ display: block;
 .float-right i{
     position: absolute;
     right: 0;
-    bottom: -17px;
+    bottom: 0px;
 }
 .center{
     text-align:center;
@@ -159,6 +160,7 @@ display: block;
 	font-size:80%;
 	width:100%;
     text-align:center;
+    box-shadow: 0 0 10px black;
 }
 .mastfoot a{
     color:white;
@@ -229,6 +231,11 @@ margin: 0px;
     font-family:"iwelcome";
     content: " \61";
 }
+.grid-outer::before,
+.grid-outer::after{
+    content:"";
+    background-color: transparent!important;
+}
 .grid-outer {
     -webkit-column-count: 3;
     /* Chrome, Safari, Opera */
@@ -236,8 +243,9 @@ margin: 0px;
     /* Firefox */
     column-count: 3;
     column-gap: 0px;
-    background-color: rgb(255, 0, 0, 0);
+    background-color: transparent!important;
     opacity: 1;
+    overflow: hidden;
 }
 .grid-outer li {
     width: 100%;
@@ -305,7 +313,11 @@ margin: 0px;
 .section-4{
     background-color:yellow;
     color:black;
-    height:200px;
+    overflow: hidden;
+}
+#section-container{
+    max-width:80%;
+    margin:0 auto;
 }
 
 /*--------------------------------------------------------------
@@ -463,10 +475,12 @@ margin: 0px;
   font-weight: bold;
   color: #c6c6c6;
   float: left;
-    text-shadow: -5px 2px 0px yellow;
-    z-index: -1;
+text-shadow: -5px 2px 0px yellow;
+z-index: -1;
    transform: translateX(-20px);
     max-height: 0px;
+     z-index: -2;
+    position: relative;
 }
 .quote-box blockquote:after{
     content: "";
@@ -475,7 +489,6 @@ margin: 0px;
 .quote-box blockquote p {
   display: inline;
 }
-/*      Right side of post     */
 .post-title-text{
     font-size:200%;
 }
@@ -500,9 +513,20 @@ margin: 0px;
     font-weight: bold;
 }
 /*--------------------------------------------------------------
-   Smaller Screen Media Query
+   Smaller Screen Media Query < 500px
 --------------------------------------------------------------*/
 @media (max-width: 1000px) {
+    
+    .float-left h2{
+        font-size:90%;
+    }
+    .float-right {
+        vertical-align: bottom;
+        font-size:150%;
+    }
+    .section-3 {
+    width: 95%;
+}
     .nav-title{
         display:none;
     }
@@ -515,22 +539,29 @@ margin: 0px;
     .nav-next{
         padding-right:10px;
     }
+    
     /* Mobile Social Nav */
     .menu-social-container {
         display: none;
     }
     
     /*   Single post mobile style   */
+    .single .site-wrapper {
+    padding-top: 50px;
+    }
     #photo-contain{
         clear:both;
         width:100%;
     }
     .quote-box{
     position:relative;
-    padding-left:20px;
+        padding: 50px;
     width:100%;
     right:0;
     bottom:0;
+    }
+    .quote-box blockquote:before {
+        transform: translate(-50px, -50px);
     }
     #only-quote blockquote{
         font-size:25px;
@@ -538,12 +569,56 @@ margin: 0px;
     .quote-box blockquote{
         clear:both;
         font-size:25px;
-        padding:0px;
+        padding: 40px;
+        width: 100%;
+    }
+    .frame{
+        margin: 0px;
     }
     .content-body {
     max-width: 100%;
-    padding:10px 10px;
+    padding: 50px 10px;
     clear:both;
+    }
+}
+
+@media (max-width: 500px) {
+    body{
+        font-size:15px;
+    }
+    .single .site-wrapper {
+    padding-top: 0px;
+    }
+    .masthead-single{
+    position: relative;
+        height:50px;
+}
+.masthead-single h1{
+    font-size:90%;
+}
+.masthead-single h1 i{
+    font-size:120%;
+}
+.masthead-single img{
+    height:20px;
+    width:auto;
+    padding:0px;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    }
+    .frame{
+        margin: 0px;
+    }
+    .content-body {
+    width:100%;
+    margin:0 auto;
+    padding:0px 5px;
+}
+    #after-content{
+        clear:both;
+        width:100%;
+        padding-bottom:0px;
     }
 }
 /*--------------------------------------------------------------

@@ -57,9 +57,12 @@
             <!--home page custom JS-->
             <script type="text/javascript">
                  jQuery(document).ready(function( $ ) {
-                     $('#loader').delay(1500).slideUp(1000);
-                    $('#front-page').delay(1500).fadeIn(2000);
-                    $('#mastfoot').delay(2000).fadeIn(2000);
+                     
+                     $(window).load(function(){
+                        $('#loader').delay(1500).slideUp(1000);
+                        $('#front-page').delay(1500).fadeIn(2000);
+                        $('#mastfoot').delay(2000).fadeIn(2000);
+                    });
                  });
             </script>
         <?php endif; ?>
