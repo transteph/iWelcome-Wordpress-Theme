@@ -25,23 +25,23 @@ get_header(); ?>
 			/* Start the Loop */ while ( have_posts() ) : the_post(); ?>
             
             <div class="before-content">
-               
-                <!--top photo-->
+
+            
+                 <!--top photo-->
                 <?php 
                     $image = get_field('main-photo');
                     if( !empty($image) ): ?>
-                <div id="photo-contain">
-                    <div class="frame">
-                        <img src="<?php echo $image['url']; ?>"/>
-                    </div>
-                 </div>
-                <!--quote-->
+                 <!--quote-->
                 <?php 
                     $quote = get_field('quote');
                 echo  '<div class="quote-box"><blockquote><br/>' . $quote . '</blockquote>
                         </div>' ;
                 ?>
-                
+                <div id="photo-contain">
+                    <div class="frame">
+                        <img src="<?php echo $image['url']; ?>"/>
+                    </div>
+                 </div>
                 
                 <?php else: ?>
                         <i id="no-pic" class="icon-house-icon"></i>

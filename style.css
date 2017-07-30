@@ -502,7 +502,7 @@ margin: 0px;
 /*--------------------------------------------------------------
    Smaller Screen Media Query
 --------------------------------------------------------------*/
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
     .nav-title{
         display:none;
     }
@@ -522,10 +522,23 @@ margin: 0px;
     
     /*   Single post mobile style   */
     #photo-contain{
+        clear:both;
         width:100%;
     }
-    #quote-box{
+    .quote-box{
+    position:relative;
+    padding-left:20px;
     width:100%;
+    right:0;
+    bottom:0;
+    }
+    #only-quote blockquote{
+        font-size:25px;
+    }
+    .quote-box blockquote{
+        clear:both;
+        font-size:25px;
+        padding:0px;
     }
     .content-body {
     max-width: 100%;
