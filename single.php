@@ -35,20 +35,26 @@ get_header(); ?>
                         <img src="<?php echo $image['url']; ?>"/>
                     </div>
                  </div>
-                
-                <?php else: ?>
-                        <i id="no-pic" class="icon-house-icon"></i>
-                 <?php endif; ?>   
-                
                 <!--quote-->
                 <?php 
                     $quote = get_field('quote');
-                    if( !empty($quote) ): ?>
-                        <div id="quote-box">
-                            <blockquote><br/><?php echo $quote ?></blockquote>
-                        </div>
-                 <?php endif; ?>  
+                echo  '<div class="quote-box"><blockquote><br/>' . $quote . '</blockquote>
+                        </div>' ;
+                ?>
                 
+                
+                <?php else: ?>
+                        <i id="no-pic" class="icon-house-icon"></i>
+                        <!--quote-->
+                        <?php 
+                            $quote = get_field('quote');
+                        echo  '<div class="quote-box" id="only-quote"><blockquote><br/>' . $quote . '</blockquote>
+                                </div>' ;
+                        ?>
+                
+                 <?php endif; ?>   
+                
+               
             </div>
             
             <!-- content body -->

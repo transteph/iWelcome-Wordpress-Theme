@@ -365,9 +365,8 @@ margin: 0px;
 .before-content{
     display:table;
     width:100%;
-    min-height:70vim;
-    box-shadow: 0 0 10px black;
     position:relative;
+    text-align: center;
 }
 #photo-contain{
     width:50%;
@@ -377,7 +376,7 @@ margin: 0px;
 }
 .frame{
  background-color:#ddc;
-  border:solid 5vmin #eee;
+  border:solid 2vmin #eee;
   border-bottom-color:#fff;
   border-left-color:#eee;
   border-radius:2px;
@@ -427,23 +426,37 @@ margin: 0px;
     color:yellow;
     font-size:200px;
 }
-#quote-box{
+#only-quote{
+    width: 70% !important;
+    margin: 0 auto !important;
+    text-align: center!important;
+    position:relative;
+    right:0;
+    bottom: 0;
+}
+#only-quote blockquote {
+    padding: 0px;
+    margin:0px;
+    transform: translateY(-70px);
+}
+.quote-box{
     position:absolute;
     right:5%;
     width:45%;
     bottom: 30%;
 }
-#quote-box blockquote{
+.quote-box blockquote{
   padding: 45px 40px 0px 0px;
   margin: 0px;
   position: relative;
   font-family: "TradeGothicW01-BoldCn20_675334",sans-serif;
-  font-size: 35px;
+  font-size: 4vw;
   line-height: 1;
   color: #4a4a4a;
     float: right;
+    text-align: left;
 }
-#quote-box blockquote:before {
+.quote-box blockquote:before {
     content: "\201C"; 
   font-family: Georgia, serif;
   font-size: 280px;
@@ -455,11 +468,11 @@ margin: 0px;
    transform: translateX(-20px);
     max-height: 0px;
 }
-#quote-box blockquote:after{
+.quote-box blockquote:after{
     content: "";
     content: "";
 }
-#quote-box blockquote p {
+.quote-box blockquote p {
   display: inline;
 }
 /*      Right side of post     */
@@ -510,6 +523,9 @@ margin: 0px;
     /*   Single post mobile style   */
     #photo-contain{
         width:100%;
+    }
+    #quote-box{
+    width:100%;
     }
     .content-body {
     max-width: 100%;
