@@ -53,7 +53,10 @@
 				});
         });
         </script>
-        <?php if (is_page()): ?>
+        
+
+<?php wp_footer(); ?>
+<?php if (is_page()): ?>
             <!--home page custom JS-->
             <script type="text/javascript">
                  jQuery(document).ready(function( $ ) {
@@ -63,10 +66,9 @@
                         $('#front-page').delay(1500).fadeIn(2000);
                         $('#mastfoot').delay(2000).fadeIn(2000);
                     });
+                     
                  });
             </script>
         <?php endif; ?>
-
-<?php wp_footer(); ?>
 </body>
 </html>
