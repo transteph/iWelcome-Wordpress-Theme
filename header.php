@@ -38,5 +38,8 @@
 	</head>
 
 		<body <?php body_class(); ?>>
+            <?php if (is_page()): ?>
+               <div id="loader"><img id="loader-img" src="http://aito.ca/iwelcome/wp-content/uploads/2017/07/iwelcome-loader.gif" /></div>
+            <?php endif; ?>
 		<div id="page" class="site">
 		

@@ -10,11 +10,11 @@ Version: 1.0
         Globals
 --------------------------------------------------------------*/
 @import url('https://fonts.googleapis.com/css?family=Oswald:400,600|Roboto');
-#front-page {
+#front,.mastfoot {
   display: none;
 }
-.page .mastfoot{
-    display:none;
+#loader{
+    padding-top:100px;
 }
 html{
     box-sizing: border-box;
@@ -24,7 +24,10 @@ html{
 *:after {
   box-sizing: inherit;
 }
-
+ul,li { list-style-type: none;
+        list-style-position:inside;
+        margin:0;
+        padding:0; }
 html,
 body {
     height: 100%;
@@ -81,10 +84,6 @@ ul,li{
     height:70px;
     padding:10px;
 }
-.masthead h1::after{
-    font-family:"iwelcome";
-    content: " \61";
-}
 .site-content{
     width:100%;
     overflow:hidden;
@@ -116,7 +115,7 @@ ul,li{
 .menu-social-container {
     display: block;
     position: fixed;
-    left: -20px;
+    left: 14px;
     bottom: 20px;
 }
 
@@ -170,7 +169,6 @@ display: block;
 	font-size:80%;
 	width:100%;
     text-align:center;
-    box-shadow: 0 0 10px black;
 }
 .mastfoot a{
     color:white;
@@ -316,6 +314,7 @@ margin: 0px;
     margin:0 auto;
 }
 .section-3 h3{
+    display:none;
     font-size:240%;
 }
 .section-3 p{
@@ -327,16 +326,80 @@ margin: 0px;
 }
 /*---   Section 4, Homepage ---*/
 .section-4{
-    background-color:yellow;
+    background: url('http://aito.ca/iwelcome/wp-content/uploads/2017/07/pattern.jpg');
     color:black;
     overflow: hidden;
     padding-bottom:50px;
+    box-shadow: 0 0 10px black;
 }
-#section-container{
-    max-width:80%;
-    margin:0 auto;
+#section-4-container{
+    width:60%;
+    float:right;
+    padding-right: 5%;
 }
-
+.section-4 h2{
+    font-size:230%;
+    font-weight:600;
+    margin: 20px 0 0 0;
+    transition:all .5s ease-in;
+    transform:translateX(-500px);
+    display: inline-block;
+    color: black;
+    background-color: yellow;
+    padding: 10px 20px;
+    text-transform: uppercase;
+}
+.section-4 h2.start{
+    transform: translateX(0px);
+}
+.section-4 p{
+    font-size: 18px;
+}
+.section-4 ul{
+    padding-top:20px;
+}
+.section-4 ul li{
+    padding: 10px 5px;
+    border: dotted black 2px;
+    margin-bottom: 7px;
+    display: table;
+    transition: all 0.3s ease-in;
+    background-color: white;
+    box-shadow: 0 0 5px grey;
+}
+.section-4 ul li::after{
+    content:'\A';
+}
+.section-4 ul li:hover{
+    transform:translateY(-10px);
+}
+#side-img-div{
+    float: left;
+    width: 30%;
+    margin-left: 50px;
+}
+#side-img-div img{
+    float: right;
+    margin: 40px 20px 10px 0px;
+    border: solid white 20px;
+    box-shadow: -10px 10px 10px grey;
+    width: 80%;
+}
+@media (max-width: 700px) {
+    #section-4-container{
+        width:80%;
+        clear:both;
+        margin:0 auto;
+    }
+    #side-img-div{
+    display:none;
+    }
+}
+@media (max-width: 500px) {
+    #side-img-div{
+        display:none;
+    }
+}
 /*--------------------------------------------------------------
         Story Posts
 --------------------------------------------------------------*/
@@ -543,6 +606,10 @@ z-index: -1;
         vertical-align: bottom;
         font-size:150%;
     }
+    .float-right i{
+        right: 10px;
+        bottom: 10px;
+    }
     .section-3 {
     width: 95%;
 }
@@ -606,7 +673,7 @@ z-index: -1;
         font-size:15px;
     }
     .masthead h1{
-        font-size: 125%;
+        font-size: 95%;
     }
     .masthead img{
         height:45px;
@@ -623,6 +690,7 @@ z-index: -1;
     .section-3{
         background-color: rgba(0, 0, 0, 0.8);
     }
+    
     .single .site-wrapper {
     padding-top: 0px;
     }
