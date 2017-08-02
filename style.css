@@ -36,6 +36,7 @@ body {
     font-family: "Roboto",sans-serif;
     font-size: 20px;
     line-height: 1.4;
+    overflow-x: hidden;
 }
 #main{
     max-width:100%;
@@ -134,6 +135,9 @@ ul,li{
 /*--------------------------------------------------------------
         Frontpage
 --------------------------------------------------------------*/
+#front-page{
+    background: url('http://aito.ca/iwelcome/wp-content/uploads/2017/07/pattern.jpg');
+}
 #loader{
     text-align: center;
 margin: 0 auto;
@@ -253,6 +257,8 @@ margin: 0px;
     background-color: transparent!important;
     opacity: 1;
     overflow: hidden;
+    position: relative;
+    z-index: 500;
 }
 .grid-outer li {
     width: 100%;
@@ -305,6 +311,9 @@ margin: 0px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    transform: translateY(-200px);
+    z-index: 5;
+    box-shadow: 0 0 10px black;
 }
 /*---   Section 3, Homepage ---*/
 .section-3{
@@ -329,8 +338,7 @@ margin: 0px;
     background: url('http://aito.ca/iwelcome/wp-content/uploads/2017/07/pattern.jpg');
     color:black;
     overflow: hidden;
-    padding-bottom:50px;
-    box-shadow: 0 0 10px black;
+    transform: translateY(-100px);
 }
 #section-4-container{
     width:60%;
@@ -353,7 +361,7 @@ margin: 0px;
     transform: translateX(0px);
 }
 .section-4 p{
-    font-size: 18px;
+    font-size: 19px;
 }
 .section-4 ul{
     padding-top:20px;
@@ -386,19 +394,34 @@ margin: 0px;
     width: 80%;
 }
 @media (max-width: 700px) {
+    .section-4{
+        transform: translateY(0px);
+    }
     #section-4-container{
-        width:80%;
-        clear:both;
+        width:90%;
+        clear:both;.
+        float: none;
         margin:0 auto;
+        padding-bottom: 50px;
     }
     #side-img-div{
-    display:none;
+    float: none;
+    clear: both;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 30px;
     }
+    #side-img-div img {
+    clear:both;
+    margin:0 auto;
+    border: solid white 5px;
+    box-shadow: -10px 10px 10px grey;
+    width: 100%;
+    }
+
 }
 @media (max-width: 500px) {
-    #side-img-div{
-        display:none;
-    }
+ 
 }
 /*--------------------------------------------------------------
         Story Posts
@@ -686,6 +709,7 @@ z-index: -1;
         background-size: cover;
         padding:100px 0px;
         background-color:yellow;
+        transform: translateY(0px);
     }
     .section-3{
         background-color: rgba(0, 0, 0, 0.8);
