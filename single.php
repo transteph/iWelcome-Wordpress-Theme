@@ -7,35 +7,64 @@
  */
 
 get_header(); ?>
+        <header class="masthead-single" role="banner">
+            <a href="http://aito.ca/iwelcome">
+	           <img src="http://aito.ca/iwelcome/wp-content/uploads/2017/07/amnesty-logo-bw.png" alt="Amnesty logo."/>
+                <h1>Refugee Champions<i class="icon-house-icon"></i></h1>
+            </a>
+		</header>
 
+				<div class="site-content-contain">
+					<div id="content" class="site-content">
+                        
 <div class="site-wrapper">
 	<div id="primary" class="content-area">
 		<main id="main" class="post" role="main">
 
 			<?php
 			/* Start the Loop */ while ( have_posts() ) : the_post(); ?>
-
-			<!--  title -->
-			<div class="post-title-div">
-				<h2 class="post-title-text"><?php the_title(); ?></h2>
-			</div>
             
-            <!-- Header image div -->
-    <?php 
-        $image = get_field('main-photo');
-        if( !empty($image) ): ?>
-            <div class="huge-img" style="background-image: url('<?php echo $image['url']; ?>'); background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;"></div>
-     <?php endif; ?>   
+            <div class="before-content">
+
+            
+                 <!--top photo-->
+                <?php 
+                    $image = get_field('main-photo');
+                    if( !empty($image) ): ?>
+                 <!--quote-->
+                <?php 
+                    $quote = get_field('quote');
+                echo  '<div class="quote-box"><blockquote><br/>' . $quote . '</blockquote>
+                        </div>' ;
+                ?>
+                <div id="photo-contain">
+                    <div class="frame">
+                        <img src="<?php echo $image['url']; ?>"/>
+                    </div>
+                 </div>
+                
+                <?php else: ?>
+                        <i id="no-pic" class="icon-house-icon"></i>
+                        <!--quote-->
+                        <?php 
+                            $quote = get_field('quote');
+                        echo  '<div class="quote-box" id="only-quote"><blockquote><br/>' . $quote . '</blockquote>
+                                </div>' ;
+                        ?>
+                
+                 <?php endif; ?>   
+                
+               
+            </div>
             
             <!-- content body -->
             <div class="content-body">
+                
+                <h2 style="margin: 0px;"><?php the_title(); ?></h2>
                 <?php the_content(); ?>
             </div>
             
-            
+        <div id="after-content">
 			<div class="center">
 			<?php edit_post_link('Edit this entry','','.'); ?>
 			</div>
@@ -48,7 +77,7 @@ get_header(); ?>
 
 			endwhile; // End of the loop.
 			?>
-
+        </div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 	<?php get_sidebar(); ?>

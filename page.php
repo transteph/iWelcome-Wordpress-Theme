@@ -12,8 +12,17 @@
  */
 
 get_header(); ?>
-    <div class="site-wrapper">
-        <div id="loader"><img id="loader-img" src="http://aito.ca/iwelcome/wp-content/uploads/2017/07/iwelcome-loader.gif" /></div>
+<div id="front">
+<header class="masthead clearfix" role="banner">
+    <a href="http://aito.ca/iwelcome/">
+        <h1>iWelcome Refugees <i class="icon-house-icon"></i></h1>
+            <img src="http://aito.ca/iwelcome/wp-content/uploads/2017/07/amnesty-logo-bw.png" alt="Amnesty logo."/>
+    </a>
+		</header>
+
+				<div class="site-content-contain">
+					<div id="content" class="site-content">
+    <div class="site-wrapper home">
         <main id="front-page" class="front-page" role="main">
             <?php
              $args = array( 'category__in' => 2, 3  );
@@ -64,15 +73,23 @@ get_header(); ?>
                             <div class="frontpage-content" id="frontpage-content">
                                 <?php the_content(); ?> 
                             </div>
-                             <?php endwhile; ?>
                 </div>
             </div>
             
             
               <!-- 4th part of page -->
             <div class="section-4">
-                
+                            <div id="side-img-div">
+                                <?php 
+                                    $image = get_field('side_image');
+                                    echo '<img src="' . $image . '"/>' ;
+                                ?>
+                            </div>
+                <div id="section-4-container">
+                    <?php echo get_field('bottom_section'); ?>
+                </div>
             </div>
+            <?php endwhile; ?>
         </main>
         <!-- #main -->
     </div>
@@ -81,3 +98,4 @@ get_header(); ?>
     <!-- .wrap -->
 
     <?php get_footer();?>
+ </div>
