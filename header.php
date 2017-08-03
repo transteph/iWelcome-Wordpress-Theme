@@ -15,21 +15,20 @@
 	<head>
 		<meta charset="<?php bloginfo( 'charset' ); ?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta property="og:url" content="http://aito.ca/iwelcome/" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Refugee Champions" />
+		<meta property="og:description" content="A project by Amnesty International Canada highlighting refugee champions."
+		/>
 		<meta property="og:updated_time" content="<?=time()?>" />
 		<meta attribute="author" content="Stephanie Tran, Amnesty International Toronto Organization" />
-		<meta attribute="description" content="iWelcome Refugees - an Amnesty International campaign welcoming refugee and migrants.">
+		<meta attribute="description" content="A project by Amnesty International Canada highlighting refugee champions.">
 		<meta attribute="keywords" content="AITO, Amnesty, Amnesty International, Toronto, human rights, refugee rights"
 		/>
-
-		<meta property="og:url" content="http://aito.ca/iWelcome" />
-		<meta property="og:type" content="website" />
-		<meta property="og:title" content="iWelcome Refugees" />
-		<meta property="og:description" content="iWelcome Refugees - an Amnesty International campaign welcoming refugee and migrants."
-		/>
-		<meta property="og:image" content="http://aito.ca/iwelcome/wp-content/uploads/2017/07/screenshot-1.png"
+		<meta property="og:image" content="http://aito.ca/iwelcome/wp-content/uploads/2017/08/iwelcome-share-img.png"
 		/>
 		<!-- sharing thumbnail image -->
-		<link rel="image_src" href="http://aito.ca/iwelcome/wp-content/uploads/2017/07/screenshot-1.png">
+		<link rel="image_src" href="http://aito.ca/iwelcome/wp-content/uploads/2017/08/iwelcome-share-img.png">
 		<link rel="shortcut icon" type="image/x-icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
 		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
