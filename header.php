@@ -14,7 +14,7 @@
 		<meta property="og:url" content="https://aito.ca/iWelcome" />
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content="iWelcome Refugees" />
-		<meta property="og:description" content="iWelcome Refugees - an Amnesty International campaign welcoming refugee and migrants."
+		<meta property="og:description" content="iWelcome Refugees - an Amnesty International campaign welcoming refugees and migrants."
 		/>
 		<meta property="og:image" content="http://aito.ca/iwelcome/wp-content/uploads/2017/07/screenshot-1.png"
 		/>
