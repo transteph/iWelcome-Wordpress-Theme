@@ -24,20 +24,22 @@ get_header(); ?>
 					<div id="content" class="site-content">
     <div class="site-wrapper home">
         <main id="front-page" class="front-page" role="main">
+			
+			<div id="topBox">
+				<div class="layer" id="l1">
+						<div class="header-text headerOne">REFUGEE CHAMPIONS <i class="icon-house-icon"></i></div>
+					</div>
+					<div class="layer" id="l2">
+						<div class="header-text headerTwo">REFUGEE CHAMPIONS <i class="icon-house-icon"></i></div>
+					</div>
+			</div>
+			
             <?php
              $args = array( 'category__in' => 2, 3  );
               $query = new WP_Query( $args ); 
 ?>
                 <?php if ( $query->have_posts() ) : ?>
                     <div class="grid-outer">
-                        <div class="img-container first-box">
-                            <div class="float-left">
-                                <a href="#frontpage-content">
-                                <h2>Refugee Champions</h2> 
-                                </a>        
-                            </div>
-                            <div class="float-right"><i class="icon-house-icon"></i></div>
-                        </div>
                         <?php while ( $query->have_posts() ) : $query->the_post(); ?>
 								<div class="grid-cell-container">
 									<!--  Image -->  
