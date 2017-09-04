@@ -25,11 +25,40 @@
         
 		<link rel="profile" href="http://gmpg.org/xfn/11">
 		<?php wp_head(); ?>
+			<script  type="text/javascript">
+	
+			window.onload = function () {
+				var parallaxBox = document.getElementById ( 'front-page' );
+				var c1left = document.getElementById ( 'l1' ).offsetLeft,
+				c1top = document.getElementById ( 'l1' ).offsetTop,
+				c2left = document.getElementById ( 'l2' ).offsetLeft,
+				c2top = document.getElementById ( 'l2' ).offsetTop;					
+					parallaxBox.onmousemove = function ( event ) {
+						event = event || window.event;
+						var x = event.clientX - parallaxBox.offsetLeft,
+						y = event.clientY - parallaxBox.offsetTop;							
+							mouseParallax ( 'l1', c1left, c1top, x, y, 5 );
+							mouseParallax ( 'l2', c2left, c2top, x, y, 15 );
+						}
+			}
+
+			function mouseParallax ( id, left, top, mouseX, mouseY, speed ) {
+				var obj = document.getElementById ( id );
+				var parentObj = obj.parentNode,
+				containerWidth = parseInt( parentObj.offsetWidth ),
+				containerHeight = parseInt( parentObj.offsetHeight );
+				obj.style.left = left - ( ( ( mouseX - ( parseInt( obj.offsetWidth ) / 2 + left ) ) / containerWidth ) * speed ) + 'px';
+				obj.style.top = top - ( ( ( mouseY - ( parseInt( obj.offsetHeight ) / 2 + top ) ) / containerHeight ) * speed ) + 'px';
+			}
+			</script>
 	</head>
 
+	
 		<body <?php body_class(); ?>>
             <?php if (is_page()): ?>
-               <div id="loader"><img id="loader-img" src="http://aito.ca/iwelcome/wp-content/uploads/2017/07/iwelcome-loader.gif" /></div>
+               <div id="loader"><img id="loader-img" src="http://aito.ca/iwelcome/wp-content/uploads/2017/07/iwelcome-loader.gif" /><br>
+                    <p style="text-align:center; color:#3a3a3a; letter-spacing:2px; ">LOADING</p>
+            
+            </div>
             <?php endif; ?>
 		<div id="page" class="site">
-		
