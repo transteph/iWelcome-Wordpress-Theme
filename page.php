@@ -1,20 +1,9 @@
 <?php
-/**
- * The template for displaying all pages
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site may use a
- * different template.
- *
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
- */
 
 get_header(); ?>
 <div id="front">
 <header class="masthead clearfix" role="banner">
-    <a href="http://aito.ca/iwelcome/">
+    <a href="http://iwelcome.aito.ca">
         <h1>iWelcome Refugees <i class="icon-house-icon"></i></h1>
             <img src="http://aito.ca/iwelcome/wp-content/uploads/2017/07/amnesty-logo-bw.png" alt="Amnesty logo."/>
     </a>
@@ -33,7 +22,9 @@ get_header(); ?>
 						<div class="header-text headerTwo">REFUGEE CHAMPIONS <i class="icon-house-icon"></i></div>
 					</div>
 			</div>
-			
+			<div class="section-0">
+            
+            </div>
             <?php
              $args = array( 'category__in' => 2, 3  );
               $query = new WP_Query( $args ); 

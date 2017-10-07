@@ -79,34 +79,17 @@
                     // Check if it's time to start the animation.
                     function checkAnimation() {
                         // section 3 animations
-                        var $elem = $('.frontpage-content h3');
+                        var $elem = $('#frontpage-content>h3');
                         
                         if (isElementInViewport($elem)) {
                             // Start the animation
                             $elem.fadeIn(2000);
                         }
-                        
-                        // section 4 animations
-                        var $elem1 = $('.section-4');
-                        var $text1 = $('.section-4 h2');
-                        if (!isElementInViewport($elem1)) {
-                            // Start the animation
-                            $text1.removeClass('start');
-                        }
-                        
-                        // If the animation has already been started
-                        else if ($text1.hasClass('start')) return;
-
-                        else if (isElementInViewport($elem1)) {
-                            // Start the animation
-                            $text1.addClass('start');
-                        }
-                    
                     }
 
                     // Capture scroll events
                     $(window).scroll(function(){
-                        checkAnimation();
+                         checkAnimation();
                     });
                      
                      

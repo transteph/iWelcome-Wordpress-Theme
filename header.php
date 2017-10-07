@@ -9,9 +9,9 @@
 		<meta property="og:updated_time" content="<?=time()?>" >
 		<meta attribute="author" content="Stephanie Tran, Amnesty International Toronto Organization">
 		<meta attribute="description" content="Refugee Champions - an Amnesty International campaign profiling refugees who have made a new home in Canada as well as all those who welcome refugees to Canada.">
-		<meta attribute="keywords" content="AITO, Amnesty, Amnesty International, Toronto, human rights, refugee rights">
+		<meta attribute="keywords" content="AITO, Amnesty, Amnesty International, Toronto, human rights, refugee rights, Canada">
 
-		<meta property="og:url" content="https://aito.ca/iwelcome">
+		<meta property="og:url" content="https://iwelcome.aito.ca">
 		<meta property="og:type" content="website">
 		<meta property="og:title" content="Refugee Champions">
 		<meta property="og:description" content="Refugee Champions - an Amnesty International campaign profiling refugees who have made a new home in Canada as well as all those who welcome refugees to Canada.">
@@ -26,7 +26,6 @@
 		<script  type="text/javascript">
 	
 		window.onload = function () {
-			console.log("running.");
 
 	var parallaxBox = document.getElementById ( 'front-page' );
 	var c1left = document.getElementById ( 'l1' ).offsetLeft,
