@@ -59,7 +59,7 @@ function mouseParallax ( id, left, top, mouseX, mouseY, speed ) {
 	
 		<body <?php body_class(); ?>>
             <?php if (is_page()): ?>
-               <div id="loader"><img id="loader-img" src="http://aito.ca/iwelcome/wp-content/uploads/2017/07/iwelcome-loader.gif" /><br>
+               <div id="loader"><img id="loader-img" src="http://iwelcome.aito.ca/wp-content/uploads/2017/07/iwelcome-loader.gif" /><br>
                     <p style="text-align:center; color:#3a3a3a; letter-spacing:2px; ">LOADING</p>
             
             </div>

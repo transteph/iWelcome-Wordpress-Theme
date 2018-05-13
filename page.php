@@ -5,7 +5,7 @@ get_header(); ?>
 <header class="masthead clearfix" role="banner">
     <a href="http://iwelcome.aito.ca">
         <h1>iWelcome Refugees <i class="icon-house-icon"></i></h1>
-            <img src="http://aito.ca/iwelcome/wp-content/uploads/2017/07/amnesty-logo-bw.png" alt="Amnesty logo."/>
+            <img src="http://iwelcome.aito.ca/wp-content/uploads/2018/05/YELLOW_RGB_Web_Use.jpg" alt="Amnesty logo."/>
     </a>
 		</header>
 

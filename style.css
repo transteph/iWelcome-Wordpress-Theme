@@ -177,7 +177,7 @@ ul,li{
     z-index: 2;
 }
 #front-page{
-    background: url('http://aito.ca/iwelcome/wp-content/uploads/2017/07/pattern.jpg');
+    background: url('http://iwelcome.aito.ca/wp-content/uploads/2018/05/pattern.jpg');
 }
 .section-0{
     height:100px;
@@ -210,7 +210,7 @@ display: block;
     text-align:center;
 }
 .mastfoot {
-     background: url(http://aito.ca/iwelcome/wp-content/uploads/2017/07/yellow-header-profiles2.png);
+     background: url(http://iwelcome.aito.ca/wp-content/uploads/2017/07/yellow-header-profiles.png);
 	background-attachment: fixed;
     background-size: auto;
     background-position: bottom;
@@ -351,7 +351,7 @@ margin: 0px;
 /*---   Section 2, Homepage ---*/
 .section-2{
     padding: 400px 0px;
-    background:url('http://aito.ca/iwelcome/wp-content/uploads/2017/07/iwelcomeamnesty2.png');
+    background:url('http://iwelcome.aito.ca/wp-content/uploads/2017/07/iwelcomeamnesty2.png');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
